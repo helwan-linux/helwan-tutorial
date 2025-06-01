@@ -1,4 +1,4 @@
-# Maintainer: Your Name <saeedbadrelden2021@gmail.com>
+# Maintainer: Saeed Badreldin <saeedbadrelden2021@gmail.com>
 pkgname=helwan-tutorial
 pkgver=1.0.0
 pkgrel=1
@@ -7,21 +7,21 @@ arch=('any')
 url="https://github.com/helwan-linux/helwan-tutorial"
 license=('MIT')
 depends=('python' 'python-pyqt5')
-source=("git+https://github.com/helwan-linux/helwan-tutorial.git")
-sha256sums=('SKIP')
+source=("git+https://github.com/helwan-linux/helwan-tutorial.git"
+        "helwan-tutor.desktop")
+sha256sums=('SKIP'
+            'SKIP')
 
 package() {
     cd "$srcdir/helwan-tutorial"
 
-    # تثبيت السكربت التنفيذي مع صلاحيات التنفيذ
+    # تثبيت السكربت التنفيذي
     install -Dm755 "helwan-tutor.py" "$pkgdir/usr/bin/helwan-tutorial"
 
-    # إنشاء مجلد الدروس
-    mkdir -p "$pkgdir/usr/share/helwan-tutorial/lessons"
-
-    # نسخ مجلد الدروس
-    cp -r "lessons/bash" "$pkgdir/usr/share/helwan-tutorial/lessons/"
+    # تثبيت مجلد الدروس
+    install -d "$pkgdir/usr/share/helwan-tutorial/lessons"
+    cp -r lessons/bash "$pkgdir/usr/share/helwan-tutorial/lessons/"
 
     # تثبيت ملف الديسكتوب
-    install -Dm644 helwan-tutor.desktop "$pkgdir/usr/share/applications/helwan-tutor.desktop"
+    install -Dm644 "$srcdir/helwan-tutor.desktop" "$pkgdir/usr/share/applications/helwan-tutor.desktop"
 }
