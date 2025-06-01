@@ -74,4 +74,26 @@ The $1 represents the first argument passed to the function.
 Comments start with # and are ignored by the shell. Use comments to explain your code.
 
 # This is a comment
+
+
 echo "Hello World"  # This prints a message
+
+
+
+#🧪 Useful Commands (Aliases)
+
+alias sync = "sudo pacman -Syyy"
+
+alias install = "sudo pacman -S"
+
+alias update = "sudo pacman -Syyu"
+
+alias search = "sudo pacman -Ss" 
+
+alias search-local = "sudo pacman -Qs" 
+
+alias pkg-info = "sudo pacman -Qi"
+
+alias local-install = "sudo pacman -U" 
+
+alias helwan = "uname -a"
