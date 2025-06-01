@@ -16,8 +16,11 @@ package() {
     # تثبيت السكربت التنفيذي مع صلاحيات التنفيذ
     install -Dm755 "helwan-tutor.py" "$pkgdir/usr/bin/helwan-tutorial"
 
+    # إنشاء مجلد الدروس
+    mkdir -p "$pkgdir/usr/share/helwan-tutorial/lessons"
+
     # نسخ مجلد الدروس
-    cp -r "lessons/bash" "$pkgdir/usr/share/helwan-tutorial/lessons/bash"
+    cp -r "lessons/bash" "$pkgdir/usr/share/helwan-tutorial/lessons/"
 
     # تثبيت ملف الديسكتوب
     install -Dm644 helwan-tutor.desktop "$pkgdir/usr/share/applications/helwan-tutor.desktop"
