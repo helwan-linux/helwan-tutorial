@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Helwan Tutor
+Comment=Linux Bash Lessons viewer with PyQt5 GUI
+Exec=/usr/bin/helwan-tutor
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+Categories=Education;Development;
