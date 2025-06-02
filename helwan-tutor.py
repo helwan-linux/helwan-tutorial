@@ -77,9 +77,9 @@ class HelwanTutor(QWidget):
         if content.strip():
             clipboard = QApplication.clipboard()
             clipboard.setText(content)
-            QMessageBox.information(self, "تم النسخ", "تم نسخ نص الدرس إلى الحافظة!")
+            QMessageBox.information(self, "copied", "the lesson copied!")
         else:
-            QMessageBox.warning(self, "فارغ", "لا يوجد محتوى للدرس لنسخه!")
+            QMessageBox.warning(self, "Empty", "ain't no content in the lesson!")
 
     def increase_font_size(self):
         if self.default_font_size < 30:
@@ -97,7 +97,7 @@ class HelwanTutor(QWidget):
         if url.isValid():
             QDesktopServices.openUrl(url)
         else:
-            QMessageBox.warning(self, "خطأ في الرابط", "الرابط الذي حاولت فتحه غير صالح.")
+            QMessageBox.warning(self, "link is Error", "the link is crushed.")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
