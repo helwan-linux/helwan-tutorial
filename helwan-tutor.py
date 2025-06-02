@@ -3,7 +3,8 @@ from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QPushButton,
     QListWidget, QTextBrowser, QSplitter, QMessageBox, QHBoxLayout
 )
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QUrl # تم إضافة QUrl هنا
+from PyQt5.QtGui import QDesktopServices # تم إضافة QDesktopServices هنا
 import os
 
 LESSONS_PATH = "lessons/bash"
@@ -27,6 +28,10 @@ class HelwanTutor(QWidget):
         self.lesson_view = QTextBrowser()
         self.default_font_size = 12  # حجم الخط الافتراضي
         self.lesson_view.setStyleSheet(f"font-size: {self.default_font_size}pt;")
+        
+        # ربط إشارة anchorClicked بدالة open_external_link
+        # هذه هي الإضافة الرئيسية للتعامل مع الروابط الخارجية
+        self.lesson_view.anchorClicked.connect(self.open_external_link) 
 
         self.splitter.addWidget(self.lesson_list)
         self.splitter.addWidget(self.lesson_view)
@@ -72,9 +77,9 @@ class HelwanTutor(QWidget):
         if content.strip():
             clipboard = QApplication.clipboard()
             clipboard.setText(content)
-            QMessageBox.information(self, "Copied", "Lesson text copied to clipboard!")
+            QMessageBox.information(self, "تم النسخ", "تم نسخ نص الدرس إلى الحافظة!")
         else:
-            QMessageBox.warning(self, "Empty", "No lesson content to copy!")
+            QMessageBox.warning(self, "فارغ", "لا يوجد محتوى للدرس لنسخه!")
 
     def increase_font_size(self):
         if self.default_font_size < 30:
@@ -85,6 +90,14 @@ class HelwanTutor(QWidget):
         if self.default_font_size > 6:
             self.default_font_size -= 2
             self.lesson_view.setStyleSheet(f"font-size: {self.default_font_size}pt;")
+
+    # الدالة الجديدة لفتح الروابط الخارجية
+    def open_external_link(self, url):
+        """يفتح الروابط الخارجية في متصفح الويب الافتراضي للنظام."""
+        if url.isValid():
+            QDesktopServices.openUrl(url)
+        else:
+            QMessageBox.warning(self, "خطأ في الرابط", "الرابط الذي حاولت فتحه غير صالح.")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
