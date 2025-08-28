@@ -1,0 +1,68 @@
+helwan-tutorial A01/
+📁 helwan-tutorial A01/
+├── 📄 CONTRIBUTING.md
+├── 📄 PKGBUILD
+├── 📄 README.md
+├── 📄 helwan-tutor.desktop
+├── 📄 helwan-tutor.py
+└── 📁 lessons
+    ├── 📁 ar
+    │   ├── 📄 00 welcome.md
+    │   ├── 📄 01_Shell_Scripting_Basics.md
+    │   ├── 📄 02_File_and_Directory_Management.md
+    │   ├── 📄 03_Permissions_and_Ownership.md
+    │   ├── 📄 04_Process_Management.md
+    │   ├── 📄 05_Input_and_Output_Redirection.md
+    │   ├── 📄 06_Text_Processing_Tools.md
+    │   ├── 📄 07_Package_Management.md
+    │   ├── 📄 08_Networking_Basics.md
+    │   ├── 📄 09_Cron_Jobs_and_Scheduling.md
+    │   └── 📄 10_Debugging_Shell_Scripts.md
+    ├── 📁 en
+    │   ├── 📄 00 welcome.md
+    │   ├── 📄 01_Shell_Scripting_Basics.md
+    │   ├── 📄 02_File_and_Directory_Management.md
+    │   ├── 📄 03_Permissions_and_Ownership.md
+    │   ├── 📄 04_Process_Management.md
+    │   ├── 📄 05_Input_and_Output_Redirection.md
+    │   ├── 📄 06_Text_Processing_Tools.md
+    │   ├── 📄 07_Package_Management.md
+    │   ├── 📄 08_Networking_Basics.md
+    │   ├── 📄 09_Cron_Jobs_and_Scheduling.md
+    │   ├── 📄 10_Debugging_Shell_Scripts.md
+    │   ├── 📄 11_Advanced_Shell_Scripting_Techniques.md
+    │   ├── 📄 12_Arch_Linux_Commands.md
+    │   ├── 📄 13_advanced_variables.md
+    │   ├── 📄 14_string_operations.md
+    │   ├── 📄 15_arrays.md
+    │   ├── 📄 16_file_operations.md
+    │   ├── 📄 17_process_management.md
+    │   ├── 📄 18_error_handling.md
+    │   ├── 📄 19_regular_expressions.md
+    │   ├── 📄 20_Permissions_and_Sudo.md
+    │   ├── 📄 21_Linux_Security_Basics.md
+    │   └── 📄 22_Automating_Tasks_with_Cron.md
+    ├── 📁 es
+    │   ├── 📄 00 welcome.md
+    │   ├── 📄 01_Shell_Scripting_Basics.md
+    │   ├── 📄 02_File_and_Directory_Management.md
+    │   ├── 📄 03_Permissions_and_Ownership.md
+    │   ├── 📄 04_Process_Management.md
+    │   ├── 📄 05_Input_and_Output_Redirection.md
+    │   ├── 📄 06_Text_Processing_Tools.md
+    │   ├── 📄 07_Package_Management.md
+    │   ├── 📄 08_Networking_Basics.md
+    │   ├── 📄 09_Cron_Jobs_and_Scheduling.md
+    │   └── 📄 10_Debugging_Shell_Scripts.md
+    └── 📁 zh
+        ├── 📄 00 welcome.md
+        ├── 📄 01_Shell_Scripting_Basics.md
+        ├── 📄 02_File_and_Directory_Management.md
+        ├── 📄 03_Permissions_and_Ownership.md
+        ├── 📄 04_Process_Management.md
+        ├── 📄 05_Input_and_Output_Redirection.md
+        ├── 📄 06_Text_Processing_Tools.md
+        ├── 📄 07_Package_Management.md
+        ├── 📄 08_Networking_Basics.md
+        ├── 📄 09_Cron_Jobs_and_Scheduling.md
+        └── 📄 10_Debugging_Shell_Scripts.md
