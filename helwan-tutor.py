@@ -10,7 +10,8 @@ from PyQt5.QtGui import QDesktopServices
 import os
 
 # Base path for lesson files
-BASE_LESSONS_PATH = "lessons"
+#BASE_LESSONS_PATH = "lessons"
+BASE_LESSONS_PATH = "/usr/share/hel-tutorial/lessons"
 # Dictionary to map language names to their codes
 LANGUAGES = {
     "العربية": "ar",
