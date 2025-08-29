@@ -14,8 +14,8 @@ import os
 BASE_LESSONS_PATH = "/usr/share/hel-tutorial/lessons"
 # Dictionary to map language names to their codes
 LANGUAGES = {
-    "العربية": "en",
-    "English": "ar",
+    "English": "en",
+    "العربية": "ar",
     "Español": "es",
     "中文": "zh"
 }
